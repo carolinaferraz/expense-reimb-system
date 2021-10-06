@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Submit Request</title>
+</head>
+<body>
+    <nav>
+        <div class="topnav">
+            <a href="home.html" alt="home" class="home_link">.</a>
+            <a href="locked.html">Home</a>
+            <a href="new.html"  class="active">submit</a>
+            <a href="http://localhost:7777/logout" id="logout">logout</a>
+          </div>
+    </nav>
+    <main>
+        <div id="form-wrapper">
+
+    <div class="submission">
+
+       <form action="http://localhost:7777/r/new" method="POST" >
+
+           <fieldset>
+               <legend>request refund</legend>
+
+               <label for="name">Your Employee Id: </label>
+               <input type="text" placeholder="employee id" name="employee_id" id="employee_id"> 
+
+               <label for="description">Expenses: </label>
+
+               <input type="text" placeholder="short description of purchases" name="request_description" id="request_description">
+
+               <label for="amount">Amount: </label>
+               <input type="number" placeholder="$$" min="1" step="any" name="request_amount" id="request_amount"> 
+
+
+               <input type="submit" id="submit_btn" value="Send">
+           </fieldset>
+
+       </form>
+    </div>
+</div>
+
+    </main>
+    <script src="scripts/create.js"></script> 
+
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Home</title>
+</head>
+<body>
+    <nav>
+        <div class="topnav">
+            <a href="#"  class="active" >Home</a>
+            <a href="http://localhost:7777/logout" id="logout_link">.</a>
+          </div>
+    </nav>
+   <main>
+    
+       <div class="home-container" id="home-container">
+<h1>Welcome.</h1>
+
+ <form action="http://localhost:7777/login" method="post" id="employee_login">
+
+    <fieldset class="login-box">
+        <legend>Employee login</legend>
+
+        <label for="username">Username: </label>
+        <input type="text" name="username" id="username" class="empl_un"> 
+
+        <label for="password">Password: </label>
+        <input type="password" name="password" id="password" class="empl_pw"> 
+
+
+        <input type="submit" id="submit" value="Send" class="empl_send_btn">
+    </fieldset>
+</form>
+
+
+<form action="http://localhost:7777/locked" method="post" id="manager_login">
+
+    <fieldset class="mng-login-box">
+        <legend>manager login</legend>
+
+        <label for="username">Username: </label>
+        <input type="text" name="username" id="username" class="mngr_un">  
+
+        <label for="password">Password: </label>
+        <input type="password" name="password" id="password"class="mngr_pwd"> 
+
+
+        <input type="submit" id="submit" value="Send" class="mngr_send_btn">
+    </fieldset>
+</form>
+    </main>
+
+
+    <script src="scripts/form.js"></script>
+</body>
+</html>

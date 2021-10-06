@@ -1,0 +1,322 @@
+
+// variables 
+$dark_clr: #333;
+$white: #fdfdfd;
+$accent_clr: rgb(63, 173, 131);
+// $accent_clr:rgb(221, 166, 146);
+$font-fam: 'Montserrat', sans-serif;
+$green: rgb(93, 175, 134);
+$green_lighter: rgba(93, 175, 134, 0.20);
+
+
+*, ::before, ::after {
+    box-sizing: border-box;
+}
+
+html {
+    text-transform: capitalize;
+    scroll-behavior: smooth;
+  }
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: $font-fam;
+    font-size: 18px;
+    background-color:$white;
+    color: $dark_clr;
+    line-height: 1.6rem;
+    color: #777;
+}
+
+h1, h2, h3 { 
+    margin-top: 2rem;
+    font-weight: normal; 
+    // margin-left: 2rem;
+}
+
+h1 {
+    
+    margin-bottom: 2rem;
+}
+
+
+ul {
+    list-style-type: square;
+}
+
+.archived-list {
+    font-size: initial;
+    font-weight: normal;
+}
+a {
+    text-decoration: none;
+    color:$accent_clr;
+}
+
+.home_link {
+    color: #333 !important;
+    margin: 0 !important;
+    padding: .5rem !important;
+    &:hover {
+        background-color: #333 !important;
+    }
+}
+
+.employee_home {
+    button.filter {
+        text-transform: capitalize;
+
+    }
+    line-height: 1.5;
+    padding: 2rem 2.25rem;
+}
+
+// nav
+
+.topnav {
+    text-transform: capitalize;
+    overflow: hidden;
+    background-color: $dark_clr;
+
+    a {
+        float: left;
+        color: #f2f2f2;
+        text-align: center;
+        padding: 14px 1.75rem;
+        text-decoration: none;
+        font-size: 17px;
+        
+        &:last-child {
+            float: right;
+        }
+        &:hover {
+            background-color: #ddd;
+            color: black;
+          }
+    }
+
+    a.active {
+        background-color: $accent_clr;
+        color: white;
+      }
+}
+
+
+.main-wrapper {
+   display: flex;
+   align-items: center;
+   flex-direction: column;
+}
+
+.home-container {
+    display: flex;
+    
+    text-transform: capitalize;
+    padding-left: 2rem;
+}
+
+.submission {
+    margin: 0 auto;
+}
+
+
+.request-wrapper {
+    
+    color: #333;
+    h1 { 
+        font-size: 1.5rem ;
+        margin-bottom: 0.5rem; 
+    }
+    text-transform: capitalize;
+    padding: 0 3rem;
+    font-size: .9rem;
+    display: grid;
+}
+.single-request {
+    background-color: #f5f5f5;
+    padding: 0 1rem;
+
+}
+
+label{
+    display: inline-flex;
+    margin-top: 0 !important;
+    margin-bottom: .5rem;
+}
+
+button.filter {
+    border: 0;
+    font-family: inherit;
+    font-size: inherit;
+    background-color: initial;
+    font-size: initial;
+    margin-left: inherit;
+    margin-bottom: 1rem;
+    cursor: pointer;
+
+    &:hover {
+        color: $accent_clr;
+        text-decoration: underline;
+    }
+}
+
+#archive-link {
+    display: block;
+    text-align: right;
+    margin-right: 1rem;
+}
+
+/* dynamically-added divs */ 
+
+.request-confirmation {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.25rem;
+    align-items: center;
+
+    h3 {
+        font-weight: normal; 
+        background-color: $green_lighter; 
+        padding: .5rem;
+        border-radius: .5rem;
+    }
+
+    p {
+        margin: .5rem;
+    }
+}
+
+hr {
+    width: 90%;
+    color: #ddd;
+}
+
+.main_home {
+
+    text-transform: capitalize;
+    padding: 3.25rem;
+    size: initial;
+
+}
+
+#home-container > .active-requests, .active-list {
+    // display: none;
+   display: flex;
+   flex-direction: row;
+   line-height: 1.25rem;
+   align-items: center;
+   align-content: space-around;
+   border-bottom: .5px solid #eaeaea;
+   padding: 1.5rem 2rem;
+   font-size: 18px !important;
+   line-height: 1.5;
+
+   p {
+       margin: .5rem;
+   }
+}
+
+// form
+
+form {
+    margin-top: 5rem;
+    width: 450px;
+    margin: 2rem auto;
+}
+
+fieldset {
+    border: none;
+}
+
+legend {
+    text-transform: capitalize;
+    // text-align: center;
+    font-size: 1.25rem;
+    padding: 0 .25rem;
+    margin-bottom: 1rem;
+}
+
+label {
+    display: block;
+    margin-top: 2rem;
+
+    &:first-of-type {
+        margin-top: 0;
+    }
+}
+
+// input fields
+input {
+    display: block;
+    padding: .5rem;
+    border: solid 1px #999;
+    font-family: inherit;
+}
+
+input[type="text"], input[type="password"] {
+    width: 20rem;
+    line-height: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+textarea {
+    min-height: 15rem;
+    min-width: 100%;
+    padding: .5rem;
+    border: solid 1px #999;
+}
+
+// submit button
+input[type="submit"] {
+    display: block;
+    margin-top: 1rem;
+    padding: .75rem 1.25rem;
+    border-radius: .75rem;
+    background-color: $dark_clr;
+    color: #fff;
+    font-family: inherit;
+    font-size: .9rem;
+    cursor: pointer;
+}
+
+
+// query for controlling fieldset
+
+@media screen and (min-width: 480px) {
+    legend {
+        font-size: 1.5rem;
+    }
+    fieldset.submit {
+        width: 60%;
+        min-width: 360px;
+
+    // centering w/ margin: auto;
+        margin: auto;
+    }
+    .login-box, .mng-login-box {
+    max-width: 40%;
+    margin: auto;
+    }
+}
+
+.approve_btn {
+    border-radius: .85rem;
+    border: 0;
+    cursor: pointer;
+    color: $accent_clr;
+    font-family: inherit;
+    font-size: .9rem;
+    margin-left: 1rem;
+    font-weight: bold;
+    background-color: #f8f8f8;
+}
+
+@media screen and (max-width: 678px) {
+    #home-container, .active-list {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+
+}

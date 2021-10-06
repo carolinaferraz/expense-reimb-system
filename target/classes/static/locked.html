@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Manager Dashboard</title>
+</head>
+<body>
+    <nav>
+        <div class="topnav">
+            <a href="locked.html"  class="active" >Home</a>
+            <a href="new.html">submit</a>
+            <a href="http://localhost:7777/logout" id="logout">logout</a>
+          </div>
+    </nav>
+
+   <main class="main_home">
+
+    <h2>Requests Dashboard</h2> 
+    <button type="submit" class="filter" id="get_all">All Active Requests</button>
+<br>
+
+<button type="submit" class="filter" id="amount_asc">Grouped by Employee & Ordered by Amount (asc)</button>
+ <br>
+
+<button type="submit" class="filter" id="archived" style="float: initial; padding-right:2rem; text-transform:capitalize">archived requests</button>
+
+<hr>
+<h3>My Requests</h3>
+<button type="submit" class="filter" id="mngr_requests" style="float: initial; padding-right:2rem; text-transform:capitalize">my submitted requests</button>
+<br>
+<button type="submit" class="filter" id="mngr_archived" style="float: initial; padding-right:2rem; text-transform:capitalize">my archived requests</button>
+<br><hr>
+
+    
+ 
+ <div id="data-display">
+
+ </div>
+
+
+    </main>
+
+    <script src="scripts/locked.js"></script>
+    <script src="scripts/archive.js"></script>
+    <script src="scripts/amount.js"></script>
+    <script src="scripts/mngr_req.js"></script>
+    <script src="scripts/mngr_archive.js"></script>
+</body>
+</html>

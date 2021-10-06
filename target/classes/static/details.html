@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Request Details</title>
+</head>
+<body>
+    <nav>
+        <div class="topnav">
+            <a href="index.html"  class="active" >Home</a>
+            <a href="new.html">submit</a>
+            <a href="login.html">logout</a>
+          </div>
+    </nav>
+
+   <main>
+
+    <div class="request-wrapper" id="request-wrapper">
+        <h1>Request Details: </h1>
+    </div>
+
+    <div class="request-status">
+        <form action="http://localhost:7777/locked/:request_id/up" method="POST" >
+
+        <input type="radio" name="approved"  id="approved" value="true" checked>
+        <label for="approve"> approve</label>
+
+        <input type="radio" name="declined" id="declined" value="true">
+        <label for="decline"> decline</label>
+
+        <input type="text" placeholder="Message (optional)" name="approval_message" id="approval_message">
+
+
+        <input type="submit" id="submit_btn" value="Submit">
+
+        </form>
+    </div>
+
+        <a href="#" id="archive-link">see archived requests</a>
+    
+    </main>
+
+    <script src="scripts/single-request.js"></script>
+</body>
+</html>
